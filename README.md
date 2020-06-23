@@ -18,9 +18,19 @@ make -C devices/switch all
 1.安装```python```  
 2.安装```esptool```  
 ```pip install esptool```  
-3.把 /devices/switch/firmware 目录下的三个文件：rboot.bin blank_config.bin switch.bin 复制到python根目录下
+3.把 /devices/switch/firmware 目录下的三个文件：rboot.bin blank_config.bin switch.bin 复制到python根目录下  
 4.清空Flash  
-```esptool.py -p [端口] earse_flash
-例：esptool.py -p COM3 earse_flash```
+```esptool.py -p [端口] earse_flash  ```
+```例：esptool.py -p COM3 earse_flash```
 5.烧录固件
-esptool.py -p [端口] -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 switch.bin
+```esptool.py -p [端口] -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 switch.bin```
+# 连接homekit
+1.手机wifi搜索并连接名称为 Sonoff Switch-XXXXXXX 的热点，配置wifi信息
+
+2.打开```家庭``` App
+
+点击右上角+号选择 添加或扫描配件 选择 我没有或无法扫描代码 
+
+选择名称为```Sonoff Switch-XXXXXXX```的配件
+
+输入代码 ```11111111``` 等待连接完成，如果失败可多试几次
