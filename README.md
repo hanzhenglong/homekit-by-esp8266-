@@ -18,8 +18,7 @@ make -C devices/switch all
 ```
 编译完成会在 ```/devices/switch/firmware ```目录下生成 ```switch.bin```文件
 ## 刷写固件
-
- windows
+**windows**
 1.安装
 ```
 python
@@ -37,8 +36,8 @@ esptool.py -p [端口] earse_flash
 例：esptool.py -p COM3 earse_flash
 ```
 5.烧录固件
-
-```esptool.py -p [端口] -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 switch.bin
+```
+esptool.py -p [端口] -b 115200 write_flash -fs 1MB -fm dout -ff 40m 0x0 rboot.bin 0x1000 blank_config.bin 0x2000 switch.bin
 ```
 # 连接homekit
 1.手机wifi搜索并连接名称为 Sonoff Switch-XXXXXXX 的热点，配置wifi信息
