@@ -3,9 +3,9 @@
 
 # 作用
 无需HomeBridge，使用ESP8266直连HomeKit  
-使用ESP8266-01S连接苹果家庭App，控制继电器 
-首先感谢两位作者 
-https://github.com/RavenSystem/esp-homekit-devices 
+使用ESP8266-01S连接苹果家庭App，控制继电器   
+首先感谢两位作者   
+https://github.com/RavenSystem/esp-homekit-devices   
 https://github.com/Gruppio/Sonoff-Homekit 
 # 使用说明
 ## 下载
